@@ -1,0 +1,116 @@
+.gifts-page {
+  min-height: 100vh;
+  background: #faf7f2;
+  padding: 3rem 2rem;
+  display: flex;
+  justify-content: center;
+}
+
+.gifts-editor {
+  width: 100%;
+  max-width: 900px;
+}
+
+/* HEADER */
+.gifts-header {
+  margin-bottom: 3rem;
+}
+
+.gifts-header h1 {
+  font-size: 2.4rem;
+  color: #b89b3e;
+}
+
+.gifts-header p {
+  color: #666;
+}
+
+/* CARD */
+.gifts-card {
+  background: #fff;
+  border-radius: 20px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+}
+
+.gifts-card h2 {
+  margin-bottom: 1.5rem;
+  font-size: 1.4rem;
+}
+
+/* FORM */
+.gifts-card label {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.9rem;
+  margin-bottom: 1.2rem;
+  color: #444;
+}
+
+.gifts-card input,
+.gifts-card textarea {
+  margin-top: 0.4rem;
+  padding: 0.8rem 1rem;
+  border-radius: 12px;
+  border: 1px solid #ddd;
+}
+
+.gifts-card textarea {
+  resize: none;
+  height: 120px;
+}
+
+/* TEMA */
+.theme-options {
+  display: flex;
+  gap: 1rem;
+}
+
+.theme {
+  padding: 0.6rem 1.5rem;
+  border-radius: 50px;
+  border: 1px solid #ccc;
+  background: transparent;
+  cursor: pointer;
+}
+
+.theme.active {
+  background: #d4af37;
+  border-color: #d4af37;
+  font-weight: 600;
+}
+
+/* PRESENTES */
+.gift-item {
+  display: grid;
+  grid-template-columns: 1fr 120px auto;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.gift-item button {
+  background: none;
+  border: none;
+  color: #c0392b;
+  cursor: pointer;
+}
+
+.add-gift {
+  background: none;
+  border: none;
+  color: #b89b3e;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* SAVE */
+.save {
+  margin-top: 2rem;
+  padding: 1rem 2.5rem;
+  border-radius: 50px;
+  border: none;
+  background: #d4af37;
+  font-weight: 600;
+  cursor: pointer;
+}
