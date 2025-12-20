@@ -1,56 +1,283 @@
-.home {
-  font-family: sans-serif;
+/* ===== RESET BÁSICO ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
+:root {
+  --primary: #d4af37; /* dourado elegante */
+  --secondary: #ffffff;
+  --dark: #1f1f1f;
+  --gray: #6b6b6b;
+  --bg-soft: #faf7f2;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: var(--bg-soft);
+  color: var(--dark);
+}
+
+/* ===== HOME ===== */
+.home {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+/* ===== HERO ===== */
 .hero {
+  min-height: 90vh;
+  background: linear-gradient(
+      rgba(0, 0, 0, 0.45),
+      rgba(0, 0, 0, 0.45)
+    ),
+    url("https://images.unsplash.com/photo-1523438885200-e635ba2c371e")
+      center/cover no-repeat;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   text-align: center;
-  padding: 4rem 2rem;
-  background: linear-gradient(135deg, #f8d7e3, #fff);
+  padding: 2rem;
+  color: #fff;
+  animation: fadeIn 1.2s ease-in-out;
 }
 
 .hero h1 {
-  font-size: 2.5rem;
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  max-width: 800px;
+  margin-bottom: 1rem;
 }
 
+.hero p {
+  font-size: 1.1rem;
+  max-width: 650px;
+  margin-bottom: 2.5rem;
+  line-height: 1.6;
+}
+
+/* ===== BOTÕES ===== */
 .hero-buttons {
-  margin-top: 2rem;
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
 }
 
-.primary {
-  background: #e91e63;
+a.primary,
+a.secondary {
+  padding: 0.9rem 2.2rem;
+  border-radius: 50px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+a.primary {
+  background: var(--primary);
+  color: #000;
+}
+
+a.primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(212, 175, 55, 0.4);
+}
+
+a.secondary {
+  border: 2px solid #fff;
   color: #fff;
-  padding: 0.8rem 1.5rem;
-  border-radius: 8px;
-  margin-right: 1rem;
-  text-decoration: none;
 }
 
-.secondary {
-  color: #e91e63;
-  text-decoration: none;
+a.secondary:hover {
+  background: #fff;
+  color: #000;
 }
 
-.how, .features, .cta {
-  padding: 3rem 2rem;
+/* ===== COMO FUNCIONA ===== */
+.how {
+  padding: 5rem 2rem;
   text-align: center;
 }
 
+.how h2 {
+  font-size: 2.2rem;
+  margin-bottom: 3rem;
+}
+
 .steps {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 2rem;
-  justify-content: center;
+  max-width: 1100px;
+  margin: auto;
 }
 
 .steps div {
-  max-width: 200px;
+  background: #fff;
+  padding: 2.5rem 2rem;
+  border-radius: 16px;
+  transition: all 0.3s ease;
+  cursor: default;
 }
 
+.steps div:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+}
+
+.steps span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  background: var(--primary);
+  color: #000;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.steps h3 {
+  margin-bottom: 0.5rem;
+}
+
+.steps p {
+  color: var(--gray);
+  line-height: 1.6;
+}
+
+/* ===== FEATURES ===== */
+.features {
+  background: #fff;
+  padding: 5rem 2rem;
+  text-align: center;
+}
+
+.features h2 {
+  font-size: 2.2rem;
+  margin-bottom: 2rem;
+}
+
+.features ul {
+  list-style: none;
+  max-width: 700px;
+  margin: auto;
+}
+
+.features li {
+  font-size: 1.1rem;
+  padding: 1rem;
+  border-bottom: 1px solid #eee;
+  transition: background 0.3s ease;
+}
+
+.features li:hover {
+  background: var(--bg-soft);
+}
+
+/* ===== CTA FINAL ===== */
 .cta {
-  background: #e91e63;
-  color: white;
+  background: linear-gradient(135deg, #d4af37, #f5e7a1);
+  padding: 4rem 2rem;
+  text-align: center;
 }
 
-.cta .primary {
-  background: white;
-  color: #e91e63;
+.cta h2 {
+  font-size: 2.2rem;
+  margin-bottom: 2rem;
+  color: #000;
+}
+
+/* ===== ANIMAÇÕES ===== */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ===== RESPONSIVO ===== */
+@media (max-width: 768px) {
+  .hero-buttons {
+    flex-direction: column;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+}
+
+/* ===== CONTAINER PADRÃO ===== */
+.hero,
+.how,
+.features,
+.cta {
+  display: flex;
+  justify-content: center;
+}
+
+.hero > *,
+.how > *,
+.features > *,
+.cta > * {
+  max-width: 1200px;
+  width: 100%;
+}
+
+/* ===== HERO AJUSTES ===== */
+.hero {
+  text-align: center;
+}
+
+.hero h1,
+.hero p {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ===== STEPS CENTRALIZADOS ===== */
+.steps {
+  align-items: stretch;
+}
+
+.steps div {
+  text-align: center;
+}
+
+/* ===== FEATURES LIST ===== */
+.features ul {
+  padding: 0;
+}
+
+.features li {
+  text-align: left;
+}
+
+/* ===== CTA ===== */
+.cta {
+  text-align: center;
+}
+
+.cta a.primary {
+  display: inline-block;
+}
+
+/* ===== MOBILE FIX ===== */
+@media (max-width: 768px) {
+  .how,
+  .features,
+  .cta {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+
+  .steps div {
+    padding: 2rem 1.5rem;
+  }
 }

@@ -11,7 +11,7 @@ export default function Home() {
         {/* HERO */}
         <section className="hero">
           <h1>
-            Tudo para o seu casamento em um só lugar 💍
+            Tudo para o seu Grande Dia em um só lugar
           </h1>
           <p>
             Organize presentes, agenda, fornecedores e muito mais,
@@ -36,7 +36,7 @@ export default function Home() {
             <div>
               <span>1</span>
               <h3>Crie sua conta</h3>
-              <p>Cadastre-se gratuitamente e personalize seu casamento.</p>
+              <p>Cadastre-se gratuitamente e personalize o seu dia especial!</p>
             </div>
 
             <div>
@@ -59,19 +59,13 @@ export default function Home() {
 
           <ul>
             <li>🎁 Criar lista de presentes personalizada</li>
-            <li>📅 Gerenciar agenda do casamento</li>
+            <li>📝 Criar agenda do dia especial</li>
+            <li>📅 Agendar serviços</li>
             <li>📸 Adicionar fotos e descrições</li>
             <li>🔐 Controle total com login seguro</li>
           </ul>
         </section>
 
-        {/* CTA */}
-        <section className="cta">
-          <h2>Comece a planejar seu grande dia</h2>
-          <a href="/register" className="primary">
-            Criar minha conta
-          </a>
-        </section>
       </main>
 
       <Footer />

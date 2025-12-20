@@ -1,0 +1,149 @@
+/* ===== PAGE ===== */
+.register-page {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: linear-gradient(
+      rgba(15, 15, 15, 0.78),
+      rgba(15, 15, 15, 0.78)
+    ),
+    url("https://images.unsplash.com/photo-1523438885200-e635ba2c371e")
+      center / cover no-repeat;
+
+  padding: 2rem;
+}
+
+/* ===== CARD ===== */
+.register-card {
+  width: 100%;
+  max-width: 460px;
+
+  background: rgba(25, 25, 25, 0.88);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+
+  border-radius: 22px;
+  padding: 3rem;
+
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.6);
+  text-align: center;
+
+  animation: fadeUp 0.8s ease;
+}
+
+.register-card h1 {
+  font-size: 2rem;
+  color: #d4af37;
+  margin-bottom: 0.5rem;
+}
+
+.register-card p {
+  font-size: 0.95rem;
+  color: #ccc;
+  margin-bottom: 2rem;
+}
+
+/* ===== FORM ===== */
+.register-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.3rem;
+}
+
+.register-form label {
+  text-align: left;
+  font-size: 0.85rem;
+  color: #ddd;
+}
+
+.register-form input,
+.register-form select {
+  width: 100%;
+  margin-top: 0.4rem;
+  padding: 0.8rem 1rem;
+
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+
+  background: rgba(0, 0, 0, 0.35);
+  color: #fff;
+
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+}
+
+.register-form select option {
+  background: #1f1f1f;
+  color: #fff;
+}
+
+.register-form input::placeholder {
+  color: #aaa;
+}
+
+.register-form input:focus,
+.register-form select:focus {
+  outline: none;
+  border-color: #d4af37;
+  box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.25);
+}
+
+/* ===== BUTTON ===== */
+.register-form button {
+  margin-top: 1rem;
+  padding: 0.9rem;
+
+  border: none;
+  border-radius: 50px;
+
+  background: linear-gradient(135deg, #d4af37, #f0de8a);
+  color: #000;
+
+  font-weight: 600;
+  cursor: pointer;
+
+  transition: all 0.3s ease;
+}
+
+.register-form button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(212, 175, 55, 0.45);
+}
+
+/* ===== LINKS ===== */
+.register-links {
+  margin-top: 2rem;
+  font-size: 0.85rem;
+  color: #bbb;
+}
+
+.register-links a {
+  margin-left: 0.4rem;
+  color: #d4af37;
+  text-decoration: none;
+}
+
+.register-links a:hover {
+  text-decoration: underline;
+}
+
+/* ===== ANIMATION ===== */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ===== MOBILE ===== */
+@media (max-width: 480px) {
+  .register-card {
+    padding: 2.2rem;
+  }
+}

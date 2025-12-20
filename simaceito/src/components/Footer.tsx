@@ -7,9 +7,9 @@ export default function Footer() {
       <div className="footer-container">
 
         <div className="footer-brand">
-          <h3>💍 Sim, Aceito!</h3>
+          <h3>Meu Dia X</h3>
           <p>
-            Tudo o que você precisa para organizar o seu casamento
+            Tudo o que você precisa para organizar o seu dia especial!
             em um só lugar.
           </p>
         </div>
@@ -37,7 +37,7 @@ export default function Footer() {
       </div>
 
       <div className="footer-bottom">
-        © {new Date().getFullYear()} Sim, Aceito! • Todos os direitos reservados
+        © {new Date().getFullYear()} Meu Dia X • Todos os direitos reservados
       </div>
     </footer>
   );

@@ -1,69 +1,93 @@
-/* Header básico */
+/* ===== HEADER ===== */
 .header {
-  background: #fff;
-  color: #333;
-  padding: 1.5rem 2rem;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  position: fixed;
   width: 100%;
+  position: sticky;
   top: 0;
-  z-index: 100;
+  z-index: 1000;
+
+  background: rgba(31, 31, 31, 0.85);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 1.2rem 2rem;
+  color: #fff;
 }
 
-/* Logo e título */
+/* ===== LOGO ===== */
 .header h2 {
-  font-size: 1.8rem;
-  font-weight: bold;
-  color: #e91e63; /* Cor padrão de destaque (pode mudar) */
-  margin: 0;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #d4af37;
 }
 
-/* Links de navegação */
+/* ===== NAV ===== */
 .header nav {
   display: flex;
+  align-items: center;
   gap: 1.5rem;
 }
 
+/* ===== LINKS ===== */
 .header nav a {
   text-decoration: none;
-  color: #333;
-  font-size: 1rem;
+  color: #eee;
+  font-size: 0.95rem;
   font-weight: 500;
+  position: relative;
   transition: color 0.3s ease;
 }
 
+/* underline animado */
+.header nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0%;
+  height: 2px;
+  background: #d4af37;
+  transition: width 0.3s ease;
+}
+
 .header nav a:hover {
-  color: #e91e63; /* Cor de hover */
-}
-
-/* Botões */
-.btn {
-  background: #e91e63;
   color: #fff;
-  padding: 0.8rem 1.5rem;
-  border-radius: 8px;
-  text-decoration: none;
-  font-weight: bold;
-  transition: background-color 0.3s ease;
 }
 
-.btn:hover {
-  background-color: #c2185b; /* Cor de hover no botão */
+.header nav a:hover::after {
+  width: 100%;
 }
 
-/* Responsividade */
+/* ===== BOTÃO ===== */
+.header nav a.btn {
+  padding: 0.6rem 1.4rem;
+  border-radius: 50px;
+  background: #d4af37;
+  color: #000;
+  font-weight: 600;
+}
+
+.header nav a.btn::after {
+  display: none;
+}
+
+.header nav a.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(212, 175, 55, 0.4);
+}
+
+/* ===== RESPONSIVO ===== */
 @media (max-width: 768px) {
   .header {
-    padding: 1rem 1.5rem;
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .header nav {
     flex-direction: column;
     gap: 1rem;
   }
+
+  .header nav {
+    gap: 1rem;
+  }
 }
+

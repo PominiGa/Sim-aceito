@@ -1,37 +1,87 @@
+/* ===== FOOTER ===== */
 .footer {
-  background: #111;
+  background: linear-gradient(135deg, #1f1f1f, #0f0f0f);
   color: #eee;
-  padding: 3rem 2rem 1rem;
+  padding: 4rem 2rem 1.5rem;
 }
 
+/* ===== CONTAINER ===== */
 .footer-container {
+  max-width: 1200px;
+  margin: auto;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2.5rem;
 }
 
+/* ===== BRAND ===== */
 .footer-brand h3 {
-  margin-bottom: 0.5rem;
+  font-size: 1.6rem;
+  color: #d4af37;
+  margin-bottom: 0.8rem;
 }
 
+.footer-brand p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #ccc;
+}
+
+/* ===== LINKS ===== */
 .footer-links h4 {
+  font-size: 1.1rem;
   margin-bottom: 1rem;
+  color: #fff;
 }
 
 .footer-links a {
   display: block;
-  color: #ccc;
   text-decoration: none;
-  margin-bottom: 0.5rem;
+  color: #ccc;
+  font-size: 0.95rem;
+  margin-bottom: 0.6rem;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+/* Hover elegante */
+.footer-links a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 0%;
+  height: 2px;
+  background: #d4af37;
+  transition: width 0.3s ease;
 }
 
 .footer-links a:hover {
   color: #fff;
 }
 
+.footer-links a:hover::after {
+  width: 40%;
+}
+
+/* ===== FOOTER BOTTOM ===== */
 .footer-bottom {
-  margin-top: 2rem;
   text-align: center;
-  font-size: 0.9rem;
+  margin-top: 3rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  font-size: 0.85rem;
   color: #aaa;
+}
+
+/* ===== RESPONSIVO ===== */
+@media (max-width: 768px) {
+  .footer {
+    text-align: center;
+  }
+
+  .footer-links a::after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
 }
