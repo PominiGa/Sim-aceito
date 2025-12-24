@@ -1,7 +1,20 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { loginFake } from "../auth/auth";
 import "./login.css";
 
 export default function Login() {
+  const navigate = useNavigate();
+
+  function handleSubmit(e: React.FormEvent) {
+    e.preventDefault();
+
+    // login fake por enquanto
+    loginFake("contratante");
+
+    // após login → editor de presentes
+    navigate("/minha-lista");
+  }
+
   return (
     <main className="login-page">
       <div className="login-card">
@@ -10,15 +23,15 @@ export default function Login() {
           Acesse sua conta para organizar ou gerenciar o seu dia especial.
         </p>
 
-        <form className="login-form">
+        <form className="login-form" onSubmit={handleSubmit}>
           <label>
             Email
-            <input type="email" placeholder="seu@email.com" />
+            <input type="email" placeholder="seu@email.com" required />
           </label>
 
           <label>
             Senha
-            <input type="password" placeholder="••••••••" />
+            <input type="password" placeholder="••••••••" required />
           </label>
 
           <button type="submit">Entrar</button>

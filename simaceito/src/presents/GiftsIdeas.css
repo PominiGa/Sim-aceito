@@ -1,0 +1,119 @@
+.gift-ideas {
+  background: #faf7f2;
+  min-height: 100vh;
+}
+
+/* ANIMAÇÃO */
+.fade-in {
+  animation: fadeIn 1s ease forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* HERO */
+.gift-ideas-hero {
+  padding: 5rem 2rem;
+  text-align: center;
+}
+
+.gift-ideas-hero h1 {
+  font-size: 3rem;
+  color: #b89b3e;
+}
+
+.gift-ideas-hero p {
+  margin-top: 1rem;
+  color: #666;
+  max-width: 600px;
+  margin-inline: auto;
+}
+
+/* GRID */
+.gift-ideas-examples {
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.examples-grid {
+  max-width: 900px;
+  margin: 3rem auto 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 2rem;
+}
+
+/* CARD */
+.example-card {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.example-card:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+}
+
+.example-card small {
+  display: block;
+  margin-top: 0.5rem;
+  color: #999;
+}
+
+/* CTA */
+.gift-ideas-cta {
+  padding: 5rem 2rem;
+  text-align: center;
+}
+
+.gift-ideas-cta a {
+  display: inline-block;
+  margin-top: 1.5rem;
+  padding: 1rem 2.5rem;
+  border-radius: 50px;
+  background: linear-gradient(135deg, #d4af37, #f0de8a);
+  font-weight: 600;
+}
+
+/* MODAL */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal {
+  background: #fff;
+  padding: 2.5rem;
+  border-radius: 20px;
+  max-width: 400px;
+  width: 90%;
+  text-align: center;
+  animation: fadeIn 0.4s ease;
+}
+
+.modal button {
+  margin-top: 1.5rem;
+  padding: 0.6rem 2rem;
+  border-radius: 50px;
+  border: none;
+  background: #d4af37;
+  font-weight: 600;
+  cursor: pointer;
+}
