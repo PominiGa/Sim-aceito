@@ -8,20 +8,23 @@ const gifts = [
   {
     id: 1,
     name: "Jogo de Jantar",
-    price: "R$ 350",
+    img: "https://portobrasil.vtexassets.com/arquivos/ids/180505/61091R---APARELHO-DE-JANTAR-42-PECAS-ROMA-BRANCO---02.jpg?v=638942263635530000",
+    price: "R$ 754",
     description: "Um lindo jogo de jantar para começar a nova fase.",
   },
   {
     id: 2,
     name: "Liquidificador",
-    price: "R$ 280",
+    img: "https://lojawap.vtexassets.com/arquivos/ids/174109/liquidificador-wb2000_01.jpg.jpg?v=638792101499170000",
+    price: "R$ 449",
     description: "Perfeito para o dia a dia do casal.",
   },
   {
     id: 3,
-    name: "Cotas para Lua de Mel",
+    name: "Caixinha",
+    img: "https://lojaboradecora.com.br/wp-content/uploads/2021/09/por-que-os-cofrinhos-para-moedas-tem-formato-porco-scaled.jpeg",
     price: "R$ 150",
-    description: "Ajude a tornar a lua de mel inesquecível.",
+    description: "Ajude com uma contribuição.",
   },
 ];
 
@@ -54,6 +57,7 @@ export default function GiftIdeas() {
                 onClick={() => setSelectedGift(gift)}
               >
                 <h3>{gift.name}</h3>
+                <img src={gift.img} alt={gift.name} />
                 <span>{gift.price}</span>
                 <small>Clique para ver mais</small>
               </div>
@@ -77,6 +81,7 @@ export default function GiftIdeas() {
         <div className="modal-overlay" onClick={() => setSelectedGift(null)}>
           <div className="modal" onClick={(e) => e.stopPropagation()}>
             <h3>{selectedGift.name}</h3>
+            <p><img src={selectedGift.img} alt={selectedGift.name} /></p>
             <p>{selectedGift.description}</p>
             <span>{selectedGift.price}</span>
 

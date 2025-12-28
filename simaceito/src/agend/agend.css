@@ -1,0 +1,106 @@
+.agenda-page {
+  min-height: 100vh;
+  background: linear-gradient(180deg, #0f0f16, #161625);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.agenda-card {
+  background: linear-gradient(180deg, #1a1a2a, #141420);
+  padding: 2.5rem;
+  border-radius: 22px;
+  max-width: 420px;
+  width: 100%;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6);
+  text-align: center;
+}
+
+.agenda-card h1 {
+    color: #d4af37;
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+}
+
+.agenda-card p {
+  color: #b8b8d4;
+  margin-bottom: 2rem;
+}
+
+/* DATE */
+.date-label {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  gap: 0.4rem;
+  font-size: 0.9rem;
+  color: #ccc;
+}
+
+.date-label input {
+  background: #0f0f18;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  color: #fff;
+  padding: 0.8rem;
+  border-radius: 14px;
+  font-size: 1rem;
+}
+
+/* PLACES */
+.places {
+  margin-top: 2rem;
+  text-align: left;
+  animation: fadeUp 0.4s ease;
+}
+
+.places h2 {
+  font-size: 1.2rem;
+  margin-bottom: 0.8rem;
+}
+
+.places ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.places li {
+  background: #1f1f32;
+  padding: 0.8rem 1rem;
+  border-radius: 14px;
+  transition: transform 0.2s ease;
+  cursor: pointer;
+}
+
+.places li:hover {
+  transform: translateX(4px);
+  background: #26263d;
+}
+
+.no-places {
+  color: #ff9fb5;
+  font-size: 0.9rem;
+}
+
+/* ANIMAÇÃO */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* MOBILE */
+@media (max-width: 480px) {
+  .agenda-card {
+    padding: 2rem 1.5rem;
+  }
+}

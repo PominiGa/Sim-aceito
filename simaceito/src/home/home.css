@@ -281,3 +281,97 @@ a.secondary:hover {
     padding: 2rem 1.5rem;
   }
 }
+
+/* ===== SERVIÇOS ===== */
+.services {
+  padding: 5rem 2rem;
+  background: var(--bg-soft);
+}
+
+.services h2 {
+  font-size: 2.2rem;
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+/* GRID */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+}
+
+/* CARD */
+.service-card {
+  background: #fff;
+  border-radius: 18px;
+  padding: 1rem;
+  transition: all 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+/* IMAGEM */
+.service-image {
+  position: relative;
+  overflow: hidden;
+  border-radius: 14px;
+}
+
+.service-image img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+/* SETAS */
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.55);
+  color: #fff;
+  border: none;
+  font-size: 1.8rem;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.arrow.left {
+  left: 10px;
+}
+
+.arrow.right {
+  right: 10px;
+}
+
+/* TEXTO */
+.service-card h3 {
+  margin-top: 1rem;
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+/* BOTÃO */
+.hire-btn {
+  margin: 1rem auto 0;
+  display: block;
+  padding: 0.6rem 2rem;
+  border-radius: 50px;
+  border: none;
+  background: var(--primary);
+  color: #000;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.hire-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(212, 175, 55, 0.4);
+}

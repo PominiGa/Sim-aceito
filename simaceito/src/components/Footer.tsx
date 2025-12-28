@@ -24,7 +24,7 @@ export default function Footer() {
         <div className="footer-links">
           <h4>Recursos</h4>
           <Link to="/lista-de-presentes">Lista de presentes</Link>
-          <a href="#">Agenda</a>
+          <Link to="/agenda">Agenda</Link>
           <a href="#">Fornecedores</a>
         </div>
 
