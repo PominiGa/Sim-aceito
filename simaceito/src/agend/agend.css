@@ -7,6 +7,7 @@
   padding: 2rem;
 }
 
+/* CARD */
 .agenda-card {
   background: linear-gradient(180deg, #1a1a2a, #141420);
   padding: 2.5rem;
@@ -17,8 +18,9 @@
   text-align: center;
 }
 
+/* TITLES */
 .agenda-card h1 {
-    color: #d4af37;
+  color: #d4af37;
   font-size: 1.8rem;
   margin-bottom: 0.5rem;
 }
@@ -28,23 +30,41 @@
   margin-bottom: 2rem;
 }
 
-/* DATE */
-.date-label {
+/* LABELS */
+.date-label,
+.city-label {
   display: flex;
   flex-direction: column;
   text-align: left;
   gap: 0.4rem;
   font-size: 0.9rem;
   color: #ccc;
+  margin-bottom: 1.4rem;
 }
 
-.date-label input {
+/* INPUTS */
+.date-label input,
+.city-label select {
   background: #0f0f18;
   border: 1px solid rgba(255, 255, 255, 0.08);
   color: #fff;
   padding: 0.8rem;
   border-radius: 14px;
   font-size: 1rem;
+  transition: border 0.25s ease, box-shadow 0.25s ease;
+}
+
+.date-label input:focus,
+.city-label select:focus {
+  outline: none;
+  border-color: #d4af37;
+  box-shadow: 0 0 0 2px rgba(212, 175, 55, 0.25);
+}
+
+/* SELECT ARROW FIX */
+.city-label select {
+  appearance: none;
+  cursor: pointer;
 }
 
 /* PLACES */
@@ -55,10 +75,12 @@
 }
 
 .places h2 {
+  color: #d4af37;
   font-size: 1.2rem;
   margin-bottom: 0.8rem;
 }
 
+/* LIST */
 .places ul {
   list-style: none;
   padding: 0;
@@ -69,10 +91,11 @@
 }
 
 .places li {
-  background: #1f1f32;
-  padding: 0.8rem 1rem;
+  background: #1f1f33;
+  padding: 0.9rem 1rem;
   border-radius: 14px;
-  transition: transform 0.2s ease;
+  color: #eaeafc;
+  transition: transform 0.2s ease, background 0.2s ease;
   cursor: pointer;
 }
 
@@ -81,9 +104,13 @@
   background: #26263d;
 }
 
+/* EMPTY */
 .no-places {
+  display: block;
+  margin-top: 0.5rem;
   color: #ff9fb5;
   font-size: 0.9rem;
+  text-align: center;
 }
 
 /* ANIMAÇÃO */
@@ -102,5 +129,9 @@
 @media (max-width: 480px) {
   .agenda-card {
     padding: 2rem 1.5rem;
+  }
+
+  .agenda-card h1 {
+    font-size: 1.6rem;
   }
 }
